@@ -59,13 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
         grade1.innerText =
           student.score_1 > 17
             ? `${student.score_1} 🌟`
-            : student.score_1 < 14
+            : student.score_1 < 14 || student.score_1 === "غایب"
             ? `${student.score_1} ⚠`
             : student.score_1;
         grade1.classList = `lesson__grade ${
           student.score_1 > 17
             ? "grade--success"
-            : student.score_1 < 14
+            : student.score_1 < 14 || student.score_1 === "غایب"
             ? "grade--error"
             : ""
         }`;
@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
         grade2.innerText =
           student.score_2 > 17
             ? `${student.score_2} 🌟`
-            : student.score_2 < 14
+            : student.score_2 < 14 || student.score_2 === "غایب"
             ? `${student.score_2} ⚠`
             : student.score_2;
         grade2.classList = `lesson__grade ${
           student.score_2 > 17
             ? "grade--success"
-            : student.score_2 < 14
+            : student.score_2 < 14 || student.score_2 === "غایب"
             ? "grade--error"
             : ""
         }`;
